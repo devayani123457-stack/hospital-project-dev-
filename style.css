@@ -1,0 +1,1931 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    height: 96px;
+
+    background: #ffffff;
+
+    position: relative;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.nav-container {
+
+    width: min(1400px, 94%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    width: 96px;
+
+    height: 96px;
+
+    border-radius: 50%;
+
+    background: #0875b5;
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    transition: 0.35s ease;
+}
+
+
+.logo:hover {
+
+    transform:
+        scale(1.05)
+        rotate(-4deg);
+}
+
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 64px;
+}
+
+
+.nav-links a {
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: #0875b5;
+}
+
+
+/* HOME */
+
+.nav-links .active {
+
+    color: #0875b5;
+}
+
+
+.nav-links .active::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 2px;
+
+    left: 50%;
+
+    bottom: -10px;
+
+    transform:
+        translateX(-50%);
+
+    border-bottom:
+        2px dotted #0875b5;
+}
+
+
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.contact-btn {
+
+    background: #0875b5 !important;
+
+    color: white !important;
+
+    padding:
+        11px 27px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.contact-btn:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-btn {
+
+    display: none;
+
+    width: 46px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #0875b5;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+
+    display: none;
+
+    position: absolute;
+
+    top: 96px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    padding: 15px 20px;
+
+    z-index: 999;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.mobile-menu a {
+
+    display: block;
+
+    padding: 15px;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+
+.mobile-menu .mobile-active {
+
+    color: #0875b5;
+
+    font-weight: 600;
+}
+
+
+.mobile-menu.show {
+
+    display: block;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    width: 100%;
+
+    min-height:
+        calc(100vh - 96px);
+
+    background: #31a5d5;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+
+/* =========================================
+   BACKGROUND CIRCLES
+========================================= */
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: 0.07;
+}
+
+
+.circle-one {
+
+    width: 500px;
+
+    height: 500px;
+
+    border:
+        70px solid white;
+
+    right: -250px;
+
+    top: -250px;
+}
+
+
+.circle-two {
+
+    width: 350px;
+
+    height: 350px;
+
+    border:
+        45px solid white;
+
+    left: -220px;
+
+    bottom: -220px;
+}
+
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    width: 62%;
+
+    padding-left: 5%;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.hero-title {
+
+    color: white;
+
+    font-size:
+        clamp(70px, 7.2vw, 115px);
+
+    line-height: 0.92;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    animation:
+        titleAppear 0.9s ease
+        forwards;
+}
+
+
+@keyframes titleAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-45px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+
+/* =========================================
+   HEARTBEAT AREA
+========================================= */
+
+.heartbeat-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    height: 85px;
+
+    margin:
+        18px 0 20px;
+}
+
+
+
+/* =========================================
+   REAL CSS HEART
+========================================= */
+
+.heart-shape {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #a54869;
+
+    position: relative;
+
+    transform:
+        rotate(-45deg);
+
+    margin:
+        12px 18px 12px 8px;
+
+    border-radius:
+        0 0 7px 0;
+
+    flex-shrink: 0;
+
+    animation:
+        realHeartBeat 1.05s
+        infinite
+        ease-in-out;
+
+    filter:
+        drop-shadow(
+            0 5px 4px
+            rgba(0, 0, 0, 0.08)
+        );
+}
+
+
+
+/* LEFT ROUND */
+
+.heart-shape::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #a54869;
+
+    border-radius: 50%;
+
+    top: -30px;
+
+    left: 0;
+}
+
+
+
+/* RIGHT ROUND */
+
+.heart-shape::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #a54869;
+
+    border-radius: 50%;
+
+    top: 0;
+
+    left: 30px;
+}
+
+
+
+/* =========================================
+   HEART BEAT
+========================================= */
+
+@keyframes realHeartBeat {
+
+    0% {
+
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    10% {
+
+        transform:
+            rotate(-45deg)
+            scale(1.16);
+    }
+
+    20% {
+
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    30% {
+
+        transform:
+            rotate(-45deg)
+            scale(1.10);
+    }
+
+    40% {
+
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    100% {
+
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+}
+
+
+
+/* =========================================
+   ECG
+========================================= */
+
+.ecg {
+
+    width: 115px;
+
+    height: 70px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.ecg svg {
+
+    width: 230px;
+
+    height: 70px;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    animation:
+        ecgMove 1.15s
+        linear
+        infinite;
+}
+
+
+.ecg polyline {
+
+    fill: none;
+
+    stroke: #c52f49;
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+@keyframes ecgMove {
+
+    from {
+
+        transform:
+            translateX(0);
+    }
+
+    to {
+
+        transform:
+            translateX(-90px);
+    }
+}
+
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+}
+
+
+.feature-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #24a638;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    flex-shrink: 0;
+
+    transition: 0.35s ease;
+}
+
+
+.feature:hover .feature-icon {
+
+    transform:
+        translateY(-5px)
+        rotate(8deg);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.feature p {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+.feature-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+}
+
+
+
+/* =========================================
+   FEATURE ICONS
+========================================= */
+
+.heart-icon {
+
+    font-size: 35px;
+}
+
+
+.emergency {
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+.emergency small {
+
+    font-size: 11px;
+}
+
+
+.doctor-icon {
+
+    font-size: 31px;
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.hero-buttons a {
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    padding:
+        14px 25px;
+
+    border-radius: 30px;
+
+    transition: 0.35s ease;
+}
+
+
+
+/* GREEN */
+
+.primary-btn {
+
+    background: #20a638;
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    background: #178b2d;
+
+    box-shadow:
+        0 9px 20px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* WHITE */
+
+.secondary-btn {
+
+    background: white;
+
+    color: #111111;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.14);
+}
+
+
+.secondary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 9px 20px
+        rgba(0, 0, 0, 0.22);
+}
+
+
+
+/* =========================================
+   DOCTOR
+========================================= */
+
+.doctor-section {
+
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 0;
+
+    width: 38%;
+
+    height: 90%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 3;
+}
+
+
+.doctor-glow {
+
+    position: absolute;
+
+    width: 430px;
+
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    bottom: -100px;
+}
+
+
+.doctor-image {
+
+    width: 90%;
+
+    max-width: 470px;
+
+    max-height: 90%;
+
+    object-fit: contain;
+
+    object-position: bottom;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation:
+        doctorFloat 4s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 15px 15px
+            rgba(0, 0, 0, 0.10)
+        );
+}
+
+
+@keyframes doctorFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .nav-links {
+
+        gap: 35px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 18px;
+    }
+
+
+    .hero-content {
+
+        width: 65%;
+    }
+
+
+    .doctor-section {
+
+        right: 1%;
+
+        width: 40%;
+    }
+
+
+    .features {
+
+        gap: 20px;
+    }
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        height: 80px;
+    }
+
+
+    .logo {
+
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 19px;
+    }
+
+
+    .nav-links {
+
+        display: none;
+    }
+
+
+    .menu-btn {
+
+        display: block;
+    }
+
+
+    .mobile-menu {
+
+        top: 80px;
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            80px 30px 0;
+
+        display: block;
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+        padding: 0;
+    }
+
+
+    .hero-title {
+
+        font-size:
+            clamp(
+                65px,
+                12vw,
+                100px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .doctor-section {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        width: 100%;
+
+        height: 420px;
+
+        margin-top: 30px;
+    }
+
+
+    .doctor-image {
+
+        width: auto;
+
+        height: 420px;
+
+        max-height: 100%;
+    }
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        height: 72px;
+    }
+
+
+    .nav-container {
+
+        width: 90%;
+    }
+
+
+    .logo {
+
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 17px;
+    }
+
+
+    .menu-btn {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 22px;
+    }
+
+
+    .mobile-menu {
+
+        top: 72px;
+    }
+
+
+    .hero {
+
+        padding:
+            55px 20px 0;
+    }
+
+
+    .hero-title {
+
+        font-size: 62px;
+
+        line-height: 0.95;
+
+        letter-spacing: -3px;
+    }
+
+
+
+    /* HEART MOBILE */
+
+    .heartbeat-area {
+
+        height: 65px;
+
+        gap: 5px;
+
+        margin:
+            15px 0 17px;
+    }
+
+
+    .heart-shape {
+
+        width: 48px;
+
+        height: 48px;
+
+        margin:
+            10px 14px 10px 6px;
+    }
+
+
+    .heart-shape::before {
+
+        width: 48px;
+
+        height: 48px;
+
+        top: -24px;
+    }
+
+
+    .heart-shape::after {
+
+        width: 48px;
+
+        height: 48px;
+
+        left: 24px;
+    }
+
+
+    .ecg {
+
+        width: 85px;
+
+        height: 55px;
+    }
+
+
+    .ecg svg {
+
+        width: 180px;
+
+        height: 55px;
+    }
+
+
+
+    /* FEATURES */
+
+    .features {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        margin-top: 28px;
+    }
+
+
+    .feature-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 28px;
+    }
+
+
+    .feature p {
+
+        font-size: 14px;
+    }
+
+
+
+    /* BUTTONS */
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-top: 25px;
+    }
+
+
+    .hero-buttons a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding:
+            13px 20px;
+
+        font-size: 16px;
+    }
+
+
+
+    /* DOCTOR */
+
+    .doctor-section {
+
+        height: 350px;
+
+        /* margin-top: 10px; */
+    }
+
+
+    .doctor-image {
+
+        height: 350px;
+
+        width: auto;
+
+        max-width: 100%;
+    }
+
+
+    .doctor-glow {
+
+        width: 300px;
+
+        height: 300px;
+
+        bottom: -80px;
+    }
+
+
+
+    /* BACKGROUND */
+
+    .circle-one {
+
+        width: 300px;
+
+        height: 300px;
+
+        border-width: 40px;
+    }
+
+
+    .circle-two {
+
+        width: 230px;
+
+        height: 230px;
+
+        border-width: 30px;
+
+        background-color: blue;
+    }
+}
+
+
+
+
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .hero-title {
+
+        font-size: 53px;
+    }
+
+
+    .heart-shape {
+
+        width: 43px;
+
+        height: 43px;
+    }
+
+
+    .heart-shape::before {
+
+        width: 43px;
+
+        height: 43px;
+
+        top: -21.5px;
+    }
+
+
+    .heart-shape::after {
+
+        width: 43px;
+
+        height: 43px;
+
+        left: 21.5px;
+    }
+
+
+    .feature p {
+
+        font-size: 13px;
+    }
+
+
+    .doctor-section {
+
+        height: 310px;
+    }
+
+
+    .doctor-image {
+
+        height: 310px;
+    }
+}
+
+
+/* 2nd page satrt */
+
+
+.hero2{
+      /* background-color:lightgreen; */
+      height:830px;
+      padding-left: 100px;
+      display: flex;
+      gap:250px;
+      padding-top: 100px;
+}
+.textbox1{
+
+      /* background-color: #c52f49;  */
+
+       height:600px;
+       width:500px
+}
+.herotext{
+          font-size: 40px;
+          color:#0875b5
+}
+.herotext1{
+          font-size: 20px;
+          margin-top: 25px;
+          padding-left: 50px;
+          
+}
+.herotext2{
+          font-size: 30px;
+          padding-top:25px;
+          font-weight: bold;
+          padding-left: 100px;
+
+}
+
+.i1{
+    top:32px;
+    position: relative;
+    right:50px;
+    color:#0875b5
+}
+.i2{
+    top:32px;
+    position: relative;
+    right:50px;
+    color:#0875b5
+}
+
+
+.textbox2{
+       background-color: #412fc5;
+       height:600px;
+       width:500px;
+         /* animation-name: ball5;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;  
+     animation-iteration-count: infinite;
+      position: relative;
+      */}
+      .textbox2{
+
+      animation:scroll linear ;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+      
+}
+
+@keyframes scroll{
+         from{
+            scale:0.3;
+            opacity: 0;
+         }
+         to{
+            scale:1;
+            opacity: 1;
+         }
+}
+.textbox1{
+      animation: fromleft linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+}
+@keyframes fromleft{
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform:translateX(0px)
+    }
+}
+.circlediv{
+    height:600px;
+    width:500px;
+    /* border-radius: 50%; */
+    /* background-color: #178b2d; */
+    position: relative;
+   
+}
+
+ /* @keyframes ball5{
+0%{
+                  top:0px;
+                  left:0px
+               }
+
+              
+
+               50%{
+                    top:0px;
+                    left:50px
+               }
+
+               100%{
+                   top:0px;
+                   left:0px
+               }}
+    */
+
+
+
+.docimg{
+    height:600px;
+    width:500px;
+     position: relative;
+    /* top:50px; */
+    /* left:100px */
+
+}
+
+                              /* 3RD PAGE STARTED */
+
+.hero3{
+    height:830px;
+    /* background-color: wheat; */
+}
+
+.cardss{
+    /* background-color: #0875b5; */
+    height:500px;
+    display: flex;
+    gap:50px;
+    /* padding-left: 50px; */
+
+}
+.card{
+    height:300px;
+    width:300px;
+    /* background-color: #0875b5; */
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #0875b5;
+    animation: cardleft linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+}
+@keyframes cardleft{
+   from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform:translateX(0px)
+}
+}
+
+.card3{
+      animation: cards2 linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+}
+
+@keyframes cards2{
+   from{
+            scale:0.3;
+            opacity: 0;
+         }
+         to{
+            scale:1;
+            opacity: 1;
+         }
+}
+
+ .card4{animation: cards4 linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+}
+
+@keyframes cards4{
+   from{
+            scale:0.3;
+            opacity: 0;
+         }
+         to{
+            scale:1;
+            opacity: 1;
+         }
+}
+.card5{
+     animation: cards5 linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+}
+@keyframes cards5{
+   0%{
+        transform: translatex(400px);
+    }
+    50%{
+        transform:translatex(0px)
+}
+   /* 75%{
+      transform:translateX(-100px) ;
+   }
+   100%{
+    transform:translateX(0px) ;
+   } */
+
+}
+
+
+
+.i3{
+    height:200px;
+    width:200px;
+    background-color:#0875b5;
+    font-size: 100px;
+    color:white;
+      padding-top: 40px;
+    border-radius: 20px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      /* border: 2px solid black; */
+}
+h5{
+    font-weight:bold ;
+    font-size: 20px;
+}
+
+ /* DEPARTMENT SECTION    */
+
+.hero3heading{
+    margin-left:600px;
+    color:#0865a1;
+    font-size: 40px;
+}
+.dep{
+    margin-left: 640px;
+}
+
+.departments-section {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 35px 0 90px;
+
+    overflow: hidden;
+
+}
+
+
+.departments-section .main-title {
+
+    margin-bottom: 45px;
+
+}
+
+
+/* =========================================
+   DEPARTMENT SLIDER
+========================================= */
+
+.department-slider {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+    margin-top: 100px;
+
+}
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.department-track {
+
+    display: flex;
+
+    width: max-content;
+
+    gap: 30px;
+
+    animation: departmentMove 10s linear infinite;
+
+}
+
+
+/* =========================================
+   DEPARTMENT BUTTON
+========================================= */
+
+.department {
+
+    width: 290px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    background: #0865a1;
+
+    color: #ffffff;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px 20px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================
+   INFINITE MOVEMENT
+========================================= */
+
+@keyframes departmentMove {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(
+            calc(-50% - 15px)
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   PAUSE WHEN HOVER
+========================================= */
+
+.department-slider:hover
+.department-track {
+
+    animation-play-state: paused;
+
+}
+
+  
+
+           /* PAGE4 STARTED */
+
+.hero4{
+    height:830px;
+    /* background-color: #178b2d; */
+    margin: auto;
+    /* padding-top:120px; */
+    text-align: center;
+}
+
+.hero4heading{
+          font-size: 40px;
+          color: #0875b5;
+}
+
+
+
+
+/* 
+
+ .hero4 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.hero4heading {
+    font-size: 42px;
+    color: #0878b9;
+    margin-bottom: 70px;
+    text-align: center;
+} */
+
+
+/* OUTER CIRCLE */
+ .round1 {
+    width: 720px;
+    height: 720px;
+    /* background: #0de0e5; */
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border: 2px solid  #0875b5;;
+}
+ 
+
+/* INNER CIRCLE */
+.round2 {
+    width: 400px;
+    height: 400px;
+    /* background: pink; */
+    border-radius: 50%;
+    position: relative;
+    border: 2px dashed #0875b5;
+}
+
+
+.ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    background:#0875b5;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    margin-left: -75px;
+    margin-top: -75px;
+
+    animation: ballOrbit 10s linear infinite;
+}
+
+
+/* 5 balls - equal spacing */
+.ball1 {
+    animation-delay: 0s;
+}
+
+.ball2 {
+    animation-delay: -2s;
+}
+
+.ball3 {
+    animation-delay: -4s;
+}
+
+.ball4 {
+    animation-delay: -6s;
+}
+
+.ball5 {
+    animation-delay: -8s;
+}
+
+
+/* CONTINUOUS ROTATION */
+@keyframes ballOrbit {
+
+    0% {
+        transform: rotate(0deg) translateY(-280px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-280px);
+    }
+
+}
+
+.centerball{
+    height:250px;
+    width:250px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    left:70px;
+    top:70px
+}
+.icon{
+    padding-top: 40px;
+    font-size: 35px;
+    color:white
+
+}
+
+.round2:hover
+.ball {
+
+    animation-play-state: paused;
+
+}
+
+.names {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.ball:hover .names {
+    opacity: 1;
+    color:white
+}
